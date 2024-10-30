@@ -3,6 +3,8 @@ package com.api_vendinha.api.domain.service;
 import com.api_vendinha.api.domain.dtos.request.UserRequestDto;
 import com.api_vendinha.api.domain.dtos.response.UserResponseDto;
 
+import java.util.List;
+
 /**
  * Interface que define os serviços relacionados a usuários.
  *
@@ -18,4 +20,8 @@ public interface UserServiceInterface {
      * @return DTO com as informações do usuário salvo, incluindo o ID gerado e outros detalhes.
      */
     UserResponseDto save(UserRequestDto userRequestDto);
+    UserResponseDto atualizar(UserRequestDto userRequestDto, Long id);
+    UserResponseDto buscar(Long id);
+    UserResponseDto atualizarStatus(boolean is_active, Long id);
+    List<UserResponseDto> listarUsers();
 }

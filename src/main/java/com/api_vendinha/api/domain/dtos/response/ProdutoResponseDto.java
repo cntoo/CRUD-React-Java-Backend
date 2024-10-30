@@ -5,11 +5,9 @@ import lombok.NoArgsConstructor;
 
 @Data
 @NoArgsConstructor
-public class UserResponseDto {
+public class ProdutoResponseDto {
     private Long id;
     private String name;
-    private String email;
-    private String password;
-    private Boolean is_active;
-    private String cpf_cnpj;
+    private int quantity;
+    private float price;
 }
